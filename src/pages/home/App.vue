@@ -1,8 +1,37 @@
 <template>
   <div class="index-box">
     <div class="header">
-      <div class="box1">
-        <div class="logo"></div>
+      <div class="box1" style="background-color:#CCCCCC">
+      <svg class="svg-text" width="500" height="115" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="drop-stroke-shadow">
+            <fegaussianblur in="SourceAlpha" stddeviation="10"></fegaussianblur>
+          </filter>
+          <symbol id="stroke">
+            <text x="50%" y="67%" fill="none" stroke-width=".035em" stroke-linecap="round" stroke-linejoin="round" paint-order="stroke fill" text-anchor="middle">Jun Blog</text>
+          </symbol>
+          <symbol id="fill">
+            <text x="50%" y="60%" text-anchor="middle">Jun Blog</text>
+          </symbol>
+        </defs>
+        <g class="svg-text__shaded__stroke" stroke="#00cccc">
+          <use y="5%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroke" opacity="0.5" filter="url(#drop-stroke-shadow)"></use>
+          <use y="3%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroke"></use>
+          <use y="2%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroke"></use>
+          <use y="1%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroke"></use>
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroke" stroke="cyan"></use>
+        </g>
+        <g fill="#e6e6e6">
+          <use class="svg-text__shaded" y="7%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill"></use>
+          <use y="6.5%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill"></use>
+          <use y="6%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill"></use>
+          <use y="5.5%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill"></use>
+          <use y="5%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill"></use>
+          <use y="4.5%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill"></use>
+          <use y="4%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill"></use>
+          <use y="3.5%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill" fill="white"></use>
+        </g>
+      </svg>
       </div>
       <div class="box2" :class="{'fixed': isFixed}">
         <div class="bb">
@@ -133,7 +162,6 @@
 
 <style lang="less" scoped>
   canvas{
-	position: absolute;
 	cursor: crosshair;
   width:100%;
   height:300px;
